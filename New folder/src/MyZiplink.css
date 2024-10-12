@@ -1,0 +1,678 @@
+ /* Global styles */
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html {
+  scroll-behavior: smooth; /* Enables smooth scrolling */
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #ffffff;
+  padding-top: 100px; /* Prevents content from being hidden behind the fixed header */
+}
+
+/* Header styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #dceeef;
+  padding: 2rem;
+  color: rgba(1,82,101,255);
+  font-size: large;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo container */
+.logo-container {
+  display: flex;
+  align-items: center;
+  margin-left: 100px;
+}
+
+/* Logo image */
+.logo-container .logo_png img {
+  width: 23px; /* Adjust this size as needed */
+  height: auto;
+  margin-right: 0.5rem;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+/* Logo text */
+.logo-container .logo img {
+  width: 150px; /* Adjust the size of the MyZiplink logo */
+  cursor: pointer;
+}
+
+/* Navigation styles */
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center; /* Align items vertically in the center */
+}
+
+.navi {
+  margin-right: 100px;
+}
+
+.nav-links li {
+  margin: 0 1rem;
+}
+
+.nav-links a {
+  color: rgba(1,82,101,255);
+  text-decoration: none;
+  font-weight: 450;
+  position: relative;
+  padding-bottom: 5px;
+  cursor: pointer;
+}
+
+/* Underline hover effect with 75% width */
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 3px;
+  background-color: rgba(1,82,101,255);
+  bottom: 0;
+  left: 2%; /* Centers the underline */
+  transition: width 0.4s ease;
+  border-radius: 25px;
+}
+
+.nav-links a:hover::after {
+  width: 75%;
+}
+
+/* Hide underline for Instagram link */
+.nav-links .instagram a::after {
+  display: none;
+}
+
+.instagram {
+  font-size: 25px; /* Adjust the icon size */
+  margin-right: 1rem; /* Space between the icon and other nav items */
+}
+/* Hamburger Icon */
+.hamburger {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* Main content styles */
+.main {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Ensure content and image align vertically */
+  padding: 2rem;
+  margin-left: 110px;
+  margin-right: 110px;
+  margin-top: 100px;
+}
+
+.main-content {
+  flex: 1;
+  max-width: 60%;
+}
+
+.main-content h1 {
+  font-size: 2.5rem;
+  color: rgba(1,82,101,255);
+  margin-bottom: 1rem;
+}
+
+.main-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  max-width: 700px;
+}
+
+.main-content p:nth-child(2) {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #015265;
+  margin-bottom: 2rem;
+}
+
+.main-image {
+  flex: 1;
+  text-align: right;
+}
+
+.main-image img {
+  max-width: 600px;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 0; /* Ensure the image starts aligned with the text */
+}
+#home_bottom h3{
+    text-align: center;
+    align-items: center;
+    color: #015265;
+    font-size: smaller;
+}
+
+/* Services section */
+.services-content {
+  margin: 2rem 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  color: rgba(1,82,101,255);
+}
+
+/* Alternating sections */
+.services-content:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.services-content img {
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.services-text {
+  flex: 1;
+  padding: 1rem;
+}
+
+.services-text h2 {
+  color: #015265;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.services-text ul {
+  list-style-type: square;
+  padding-left: 1.5rem;
+}
+
+.services-text ul li {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+/* Global smooth scroll */
+html {
+scroll-behavior: smooth;
+}
+
+/* Contact Us Section Styles */
+.contact-section {
+background-color: #dceeef;
+padding: 50px 0;
+text-align: left;
+color: rgba(1,82,101,255);
+margin-top: 50px;
+padding-left: 10%;
+}
+
+.contact-section h2 {
+font-size: 2.5rem;
+margin-bottom: 1rem;
+color: rgba(1,82,101,255);
+}
+
+.contact-section p {
+font-size: 1.2rem;
+margin-bottom: 1rem;
+}
+
+.contact-section a {
+color: rgba(1,82,101,255);
+text-decoration: none;
+font-weight: bold;
+}
+#have_ques{
+opacity: 50%;
+font-size: small;
+}
+
+.contact-section a:hover {
+text-decoration: underline;
+}
+
+
+.contact-section .back-to-top {
+position: fixed;
+bottom: 30px; /* Adjust as necessary */
+right: 30px; /* Adjust as necessary */
+background-color: rgba(1, 82, 101, 255); /* Background color */
+color: white; /* Icon color */
+border-radius: 50%; /* Circular button */
+padding: 10px; /* Padding around the icon */
+text-align: center;
+font-size: 24px; /* Icon size */
+display: none; /* Hidden by default */
+transition: opacity 0.3s; /* Smooth fade */
+z-index: 1000; /* Ensure it's above other content */
+}
+
+/* Show the button only when in contact section */
+.contact-section .back-to-top.show {
+display: block;
+}
+
+.back-to-top:hover {
+background-color: rgba(1, 82, 101, 0.8); /* Slightly darker on hover */
+}
+
+/* Footer styles */
+.footer {
+  text-align: center;
+  color: #dceeef;
+  padding: 1rem;
+  background-color: #015365cc;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  margin-top: auto;
+}
+.image-hide{
+  display: none;
+}
+.hamburger.hide{
+  display: none;
+}
+.close-menu{
+  display: none;
+}
+.slide {
+  display: none;
+}
+#insta{
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  /* Hide Navigation Menu by default */
+  .navi ul {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(51, 51, 51, 0.9); /* Slight transparency */
+    position: absolute;
+    top: 80px;
+    right: -70%; /* Start hidden on the right */
+    width: 70%; /* Covers 70% of the screen width */
+    height: 100vh; /* Full screen height */
+    transition: right 0.3s ease-in-out; /* Smooth transition */
+    z-index: 999;
+  }
+
+  /* Show menu when hamburger icon is clicked */
+  .navi.show ul {
+    right: 0; /* Slide in from the right */
+  }
+
+  /* Hamburger icon */
+  .hamburger {
+    display: flex;
+    position: absolute;
+    right: 20px;
+    top: 30px;
+    z-index: 1000;
+    cursor: pointer;
+    color: #015265;
+  }
+  .logo-container{
+    margin: 0;
+  }
+  .hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+    transition: 0.3s;
+  }
+
+  /* Hide Session Images */
+  .services-image img {
+    display: none;
+  }
+
+  /* Main image section with background */
+  .main-image {
+    /* background-image: url('home.jpg'); Set main image as background */
+    background-size: cover;
+    background-position: center;
+    height: 50vh; /* Full screen height */
+    width: auto;
+    
+  }
+  .main-image img{
+    display: none;
+    width: 100%;
+    height: fit-content;
+  }
+  
+  .main-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+    color: black;
+    z-index: 2; /* Ensure text is on top */
+    width: 100%;
+    padding: 0;
+    max-width: 90%;
+  }
+  .image-hide{
+    display: block;
+  }
+  .image-hide img{
+    width: 100%;
+    height: fit-content;
+    margin-top: 20%;
+  }
+  #home_bottom h3{
+    padding-top: 28%;
+  }
+  .main-content h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .main-content p {
+    font-size: smaller;
+    margin-bottom: 1rem;
+  }
+  
+  .main-content h1, .main-content p {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Unique background images for each service section */
+  .services-content {
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+
+  /* Each section has its unique background image */
+  #skilled-labor {
+    background-image: url('main.jsx');
+  }
+
+  .services-content#technical-automotive {
+    background-image: url('images/Technical%20&%20Automotive%20Services.jpeg');
+  }
+
+  .services-content#creative {
+    background-image: url('images/Creative%20Services.jpg');
+  }
+
+  .services-content#event {
+    background-image: url('images/Event%20&%20Decoration%20Services2.jpg');
+  }
+
+  .services-content#digital {
+    background-image: url('images/Digital%20&%20Development%20Services.jpg');
+  }
+
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.navi {
+  display: flex;
+}
+
+.nav-links {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #333;
+}
+
+.nav-links li a:hover {
+  color: #007bff;
+}
+
+.close-menu {
+  display: none;
+  cursor: pointer;
+}
+
+  /* Reduce opacity or add dark overlay to background images */
+  .services-content::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.23); /* Dark overlay */
+    z-index: 1;
+  }
+
+  /* Ensure content inside each section is on top of overlay */
+  .services-content * {
+    position: relative;
+    z-index: 2;
+  }
+  .main{
+    margin: 0;
+  }
+
+  /* Ensure the main image text is on top */
+  .main-content h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+
+  .main-content p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  .menu-icon {
+    font-size: 30px;
+    cursor: pointer;
+  }
+  
+  
+  .navi {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #fff;
+    width: 200px;
+    height: 100vh;
+    padding: 20px;
+    box-shadow: -2px 0px 5px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(100%);
+  }
+
+  .navi.show {
+    display: flex;
+    transform: translateX(0);
+    margin: 0;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .close-menu {
+    display: block;
+    margin-bottom: 20px;
+    text-align: right;
+  }
+  .slide{
+    padding: 10%;
+    display: block;
+  }
+  .slide a{
+    text-decoration: none;
+    color: #015265;
+    font-size: large;
+    font-weight: bold;
+    list-style-type: none; /* Removes the bullet points */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+  }
+  #insta{
+    list-style: none;
+  display: inline-block;
+  padding: 0 20px;
+  font-size: 32px;
+  vertical-align: middle; /* Ensures alignment with other elements */
+  }
+  .insta a {
+    color: #015265; /* Set the icon color */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Make the anchor tag an inline-block */
+  }
+  
+  .insta a:hover {
+    color: #013d47; /* Optional: Change color on hover */
+  }
+  
+  /* Adjust hamburger menu icon */
+  .hamburger {
+    display: inline-block;
+    cursor: pointer;
+    margin-left: 10px; /* Adjust space between hamburger and Instagram icon */
+  }
+  
+  /* Optional: Hide hamburger when nav is open */
+  .hamburger.hide {
+    display: none;
+  }
+}
+.slide li {
+  display: flex;
+  align-items: center; /* Align items vertically */
+  margin-bottom: 15px; /* Space between each list item */
+}
+/* Style the links inside the list items */
+.slide li a {
+  text-decoration: none;
+  color:#015265; /* Icon and text color */
+  font-size: 18px; /* Set font size for text */
+  display: flex;
+  align-items: center; /* Align text and icon horizontally */
+  gap: 10px; /* Space between icon and text */
+}
+/* Adjust icon size if needed */
+.slide li a .fa-icon {
+  font-size: 24px; /* Icon size */
+}
+
+/* Add hover effect for links */
+.slide li a:hover {
+  color: #007bff; /* Change text and icon color on hover */
+}
+/* Responsive Design with Media Queries */
+@media (max-width: 768px) {
+  .services-content {
+    flex-direction: column;
+  }
+
+  .services-text {
+    margin: 0 0 1rem 0;
+  }
+
+  .navi ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navi ul li {
+    margin: 0.5rem 0;
+  }
+
+  .main h1 {
+    font-size: 2rem;
+  }
+
+  .main p {
+    font-size: 1rem;
+  }
+}
+
+
+
+/* Responsive for smaller screens (768px and below) */
+/* @media (max-width: 768px) {
+  .logo_png img,
+  .logo img {
+    max-width: 80px;
+  }
+
+  .main h1 {
+    font-size: 1.8rem;
+  }
+
+  .main p {
+    font-size: 1rem;
+  }
+
+  .navi ul li a {
+    font-size: 1rem;
+  }
+
+  .services-text ul li {
+    font-size: 0.9rem;
+  }
+} */
+@media (max-width: 480px) {
+  .logo_png img,
+  .logo img {
+    max-width: 80px;
+  }
+
+  .main h1 {
+    font-size: 1.5rem;
+  }
+
+  .main p {
+    font-size: 0.9rem;
+  }
+
+  .navi ul li a {
+    font-size: 1rem;
+  }
+
+  .services-text ul li {
+    font-size: 0.9rem;
+  }
+}
